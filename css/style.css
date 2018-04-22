@@ -47,7 +47,7 @@ a:hover, a:active{
 .home-screen{
   grid-area: home-screen;
   text-align: center;
-  background: url('../images/beach-pic.jpg');
+  background: url('../images/beach-pic.JPG');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
