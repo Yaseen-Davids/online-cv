@@ -71,7 +71,7 @@
 
 @media only screen
   and (min-device-width: 1px)
-  and (max-device-width: 1280px)
+  and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2){
     .prog-lang{
       height: 150px;
