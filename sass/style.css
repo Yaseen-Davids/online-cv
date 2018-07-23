@@ -1,0 +1,1189 @@
+/* This is the code for the grid container */
+/* MIXINS */
+/* VARIABLES */
+* {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'navbar' 'home-screen' 'about' 'prog-lang' 'studies' 'experience-section' 'hobbies-section' 'contact' 'footer';
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.grid-container > div {
+  padding: 20px;
+}
+
+/* This is the code for the navigation bar */
+#navbar {
+  top: -100px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navbar;
+  padding: 20px;
+  font-size: 1.6em;
+  word-spacing: 60px;
+  text-align: center;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#navbar a:hover {
+  border-bottom-color: black;
+}
+
+/* This is the code for the home screen text and picture */
+.home-screen {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: home-screen;
+  text-align: center;
+  background: url("../images/beach-pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.home-screen h1 {
+  margin-top: 120px;
+  font-size: 4em;
+  letter-spacing: 3px;
+  color: #939393;
+}
+
+.home-screen h4 {
+  font-size: 1.4em;
+  letter-spacing: 3px;
+  color: #939393;
+}
+
+.margin-wrapper {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+/* This is the code for the about section of the page */
+.about {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: about;
+  opacity: 0;
+  margin-top: 250px;
+  background-color: rgba(0, 0, 0, 0.842);
+  color: white;
+  height: 330px;
+  padding: 10px;
+  display: block;
+  -webkit-box-shadow: 5px 10px 20px #333;
+          box-shadow: 5px 10px 20px #333;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  /* This is the code for the text inside the about section */
+}
+
+.about .box-about {
+  float: right;
+  height: 99%;
+  /* Box about heading and paragraph font sizes */
+}
+
+.about .box-about h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.about .box-about p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* This is the code for the Programming Languages Bar */
+.prog-lang {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: prog-lang;
+  opacity: 0;
+  margin-top: 250px;
+  background-color: #ebebebc4;
+  text-align: center;
+  -webkit-box-shadow: 5px 10px 20px #ebebeb;
+          box-shadow: 5px 10px 20px #ebebeb;
+  height: 450px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.prog-lang .margin-wrapper {
+  margin-right: 200px;
+  margin-left: 200px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'prog-head prog-content';
+  -ms-grid-columns: 30% 1fr;
+      grid-template-columns: 30% 1fr;
+}
+
+.prog-lang .margin-wrapper .prog-head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: prog-head;
+  border: none;
+  height: 450px;
+  position: relative;
+}
+
+.prog-lang .margin-wrapper .prog-head h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+
+.prog-lang .margin-wrapper .prog-content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: prog-content;
+  border: none;
+  height: 450px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 10px;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box {
+  margin-top: 20px;
+  height: 90px;
+  border: none;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .html-img {
+  height: 90px;
+  width: 18%;
+  float: left;
+  border: none;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .html-img img {
+  height: 70%;
+  width: 90%;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .html-bar {
+  background: #ff6600;
+  float: left;
+  margin-left: 20px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .html-bar #html-percent {
+  width: 0%;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .css-img {
+  height: 90px;
+  width: 18%;
+  float: left;
+  border: none;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .css-img img {
+  height: 70%;
+  width: 90%;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .css-bar {
+  background: #037abe;
+  float: left;
+  margin-left: 20px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .css-bar #css-percent {
+  width: 0%;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .js-img {
+  height: 90px;
+  width: 18%;
+  float: left;
+  border: none;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .js-img img {
+  height: 70%;
+  width: 90%;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .js-bar {
+  background: #c2cf05;
+  float: left;
+  margin-left: 20px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .js-bar #js-percent {
+  width: 0%;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .python-img {
+  height: 90px;
+  width: 18%;
+  float: left;
+  border: none;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .python-img img {
+  height: 70%;
+  width: 90%;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .python-bar {
+  background: #01bb29;
+  float: left;
+  margin-left: 20px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+.prog-lang .margin-wrapper .prog-content .prog-box .python-bar #python-percent {
+  width: 0%;
+}
+
+/* This code is for the studies and hobbies section of the page (blue) */
+.studies {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: studies;
+  opacity: 0;
+  margin-top: 250px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.842);
+  -webkit-box-shadow: 5px 10px 20px #333;
+          box-shadow: 5px 10px 20px #333;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.studies .studies-section {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'stud-first stud-second';
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  color: white;
+}
+
+.studies .studies-section h3 {
+  font-size: 1.5em;
+}
+
+.studies .studies-section p {
+  word-spacing: 2px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.studies .studies-section #stud-first {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: stud-first;
+}
+
+.studies .studies-section #stud-second {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: stud-second;
+}
+
+.experience-section {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: experience-section;
+  height: 600px;
+  opacity: 0;
+  margin-top: 250px;
+  background-color: #ebebebc4;
+  -webkit-box-shadow: 5px 10px 20px #ebebeb;
+          box-shadow: 5px 10px 20px #ebebeb;
+  color: grey;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.experience-section h2, .experience-section h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.experience-section h4 {
+  margin-top: 40px;
+  font-size: 1.3em;
+}
+
+.experience-section p {
+  font-size: 1.2em;
+  margin-left: 80px;
+}
+
+.hobbies-section {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: hobbies-section;
+  height: 350px;
+  opacity: 0;
+  margin-top: 250px;
+  text-align: center;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#c2e59c), to(#64b3f4));
+  background: linear-gradient(to right, #c2e59c, #64b3f4);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.hobbies-section h2 {
+  font-weight: bolder;
+}
+
+.hobbies-section ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.hobbies-section ul li {
+  font-size: 1.4em;
+  margin-top: 10px;
+}
+
+/* This code is for the contact section of the page */
+.contact {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: contact;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  height: 150px;
+  -webkit-box-shadow: 5px 5px 20px #ebebeb;
+          box-shadow: 5px 5px 20px #ebebeb;
+  background-color: rgba(235, 235, 235, 0.842);
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contact h2 {
+  text-align: center;
+  color: #6e6e6e;
+}
+
+.contact a {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact a button {
+  padding: 10px 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#7474BF), to(#348AC7));
+  background: linear-gradient(to right, #7474BF, #348AC7);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact a button:hover {
+  padding: 10px 25px;
+}
+
+.contact #myForm {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.contact #myForm input {
+  font-size: 1.1em;
+  border: none;
+  border-radius: 3px;
+  padding: 6px;
+  width: 600px;
+  outline-color: green;
+}
+
+.contact #myForm textarea {
+  border-radius: 3px;
+  font-size: 1.1em;
+  border: none;
+  resize: none;
+  width: 610px;
+}
+
+.contact #myForm button {
+  padding: 10px 15px;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#1efa29), to(#00c91b));
+  background: linear-gradient(to right, #1efa29, #00c91b);
+  color: white;
+  border: none;
+  outline: none;
+  outline-color: green;
+  font-size: 1em;
+  margin-left: 38%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact #myForm button:hover {
+  padding: 10px 22px;
+}
+
+/* This is the code for the footer text and image logos */
+.footer {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background: -webkit-gradient(linear, right top, left top, from(#000000), to(#4b4b4b));
+  background: linear-gradient(to left, #000000, #4b4b4b);
+}
+
+.footer h3 {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  /* This is the code for the links in the footer */
+}
+
+.footer h3 a {
+  color: white;
+}
+
+.footer h3 a:hover {
+  color: #05aefc;
+  text-decoration: underline;
+}
+
+@media (min-width: 1px) and (max-width: 599px) {
+  /* This is the code for the navigation bar */
+  #navbar {
+    padding: 20px;
+    font-size: 0.6em;
+    word-spacing: 30px;
+  }
+  .grid-container > div {
+    padding: 10px;
+  }
+  .margin-wrapper {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  /* This is the code for the home screen text and picture */
+  .home-screen {
+    height: 700px;
+  }
+  .home-screen h1 {
+    margin-top: 120px;
+    font-size: 2em;
+    letter-spacing: 3px;
+    color: #939393;
+  }
+  .home-screen h4 {
+    margin-top: 10px;
+    font-size: 1.4em;
+    letter-spacing: 3px;
+    color: #939393;
+  }
+  /* This is the code for the about section of the page */
+  .about {
+    margin-top: 250px;
+    height: 450px;
+    padding: 5px;
+    /* This is the code for the text inside the about section */
+  }
+  .about .box-about {
+    height: 99%;
+    /* Box about heading and paragraph font sizes */
+  }
+  .about .box-about h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+  }
+  .about .box-about p {
+    font-size: 1.1em;
+  }
+  /* This is the code for the Programming Languages Bar */
+  .prog-lang {
+    padding: 0;
+    opacity: 0;
+    margin-top: 250px;
+    height: 500px;
+  }
+  .prog-lang .margin-wrapper {
+    margin-right: 10px;
+    margin-left: 10px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'prog-head' 'prog-content';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .prog-lang .margin-wrapper .prog-head {
+    height: 50px;
+    position: relative;
+  }
+  .prog-lang .margin-wrapper .prog-head h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
+  .prog-lang .margin-wrapper .prog-content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: prog-content;
+    border: none;
+    height: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  /* This code is for the studies and hobbies section of the page */
+  .studies {
+    opacity: 0;
+    margin-top: 250px;
+    height: 620px;
+  }
+  .studies .studies-section {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'stud-first' 'stud-second';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .studies .studies-section h3 {
+    font-size: 1em;
+  }
+  .studies .studies-section p {
+    font-size: 0.9em;
+    word-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .experience-section {
+    height: 640px;
+  }
+  .experience-section h2, .experience-section h3 {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .experience-section h4 {
+    margin-top: 40px;
+    font-size: 1em;
+  }
+  .experience-section p {
+    font-size: 0.9em;
+    margin-left: 30px;
+  }
+  .hobbies-section {
+    padding: 0;
+    height: 320px;
+  }
+  .hobbies-section h2 {
+    font-weight: bolder;
+    font-size: 1em;
+  }
+  .hobbies-section ul {
+    margin-top: 20px;
+  }
+  .hobbies-section ul li {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  /* This code is for the contact section of the page */
+  .contact {
+    padding: 5px;
+    margin-top: 200px;
+    height: 150px;
+  }
+  .contact h2 {
+    color: #6e6e6e;
+    font-size: 1em;
+  }
+  .contact a {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .contact a button {
+    padding: 5px 10px;
+    font-size: 1em;
+  }
+  .contact a button:hover {
+    padding: 5px 15px;
+  }
+  .contact #myForm {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .contact #myForm input {
+    font-size: 0.9em;
+    border: none;
+    border-radius: 3px;
+    padding: 2px;
+    width: 100%;
+  }
+  .contact #myForm textarea {
+    border-radius: 3px;
+    font-size: 1em;
+  }
+  /* This is the code for the footer text and image logos */
+  .footer img {
+    height: 30px;
+    width: 30px;
+  }
+  .footer h3 {
+    font-size: 1em;
+    /* This is the code for the links in the footer */
+  }
+  .footer h3 a {
+    color: white;
+  }
+  .footer h3 a:hover {
+    color: #05aefc;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 400px) {
+  .about {
+    height: 370px;
+  }
+  .experience-section {
+    height: 580px;
+  }
+  .hobbies-section {
+    padding: 0;
+    height: 300px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+  .about {
+    height: 360px;
+  }
+  .experience-section {
+    height: 550px;
+  }
+  .hobbies-section {
+    padding: 0;
+    height: 300px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 599px) {
+  .about {
+    height: 300px;
+  }
+  .experience-section {
+    height: 520px;
+  }
+  .hobbies-section {
+    padding: 0;
+    height: 300px;
+  }
+  .studies {
+    height: 550px;
+  }
+  /* This code is for the contact section of the page */
+  .contact h2 {
+    font-size: 1.5em;
+  }
+  .contact #myForm {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .contact #myForm input {
+    font-size: 1em;
+    border-radius: 3px;
+    padding: 5px;
+    width: 400px;
+  }
+  .contact #myForm textarea {
+    border-radius: 3px;
+    font-size: 1em;
+    width: 405px;
+    height: 150px;
+  }
+  .footer h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  /* This is the code for the navigation bar */
+  #navbar {
+    font-size: 1em;
+    word-spacing: 30px;
+  }
+  .grid-container > div {
+    padding: 10px;
+  }
+  .margin-wrapper {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  /* This is the code for the home screen text and picture */
+  .home-screen {
+    height: 700px;
+  }
+  .home-screen h1 {
+    margin-top: 120px;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    color: #939393;
+  }
+  .home-screen h4 {
+    margin-top: 10px;
+    font-size: 1.7em;
+    letter-spacing: 3px;
+    color: #939393;
+  }
+  /* This is the code for the about section of the page */
+  .about {
+    margin-top: 250px;
+    height: 360px;
+    padding: 5px;
+    /* This is the code for the text inside the about section */
+  }
+  .about .box-about {
+    height: 99%;
+    /* Box about heading and paragraph font sizes */
+  }
+  .about .box-about h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+  }
+  .about .box-about p {
+    font-size: 1.4em;
+  }
+  /* This is the code for the Programming Languages Bar */
+  .prog-lang {
+    padding: 0;
+    opacity: 0;
+    margin-top: 250px;
+    height: 500px;
+  }
+  .prog-lang .margin-wrapper {
+    margin-right: 150px;
+    margin-left: 150px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'prog-head' 'prog-content';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .prog-lang .margin-wrapper .prog-head {
+    height: 50px;
+    position: relative;
+  }
+  .prog-lang .margin-wrapper .prog-head h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
+  .prog-lang .margin-wrapper .prog-content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: prog-content;
+    border: none;
+    height: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  /* This code is for the studies and hobbies section of the page */
+  .studies {
+    opacity: 0;
+    margin-top: 250px;
+    height: 620px;
+  }
+  .studies .studies-section {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'stud-first' 'stud-second';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .studies .studies-section h3 {
+    font-size: 1.3em;
+  }
+  .studies .studies-section p {
+    font-size: 1.1em;
+    word-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .experience-section {
+    height: 600px;
+  }
+  .experience-section h2, .experience-section h3 {
+    text-align: center;
+    font-size: 1.6em;
+  }
+  .experience-section h4 {
+    margin-top: 40px;
+    font-size: 1.3em;
+  }
+  .experience-section p {
+    font-size: 1.1em;
+    margin-left: 30px;
+  }
+  .hobbies-section {
+    padding: 0px;
+    height: 350px;
+  }
+  .hobbies-section h2 {
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+  .hobbies-section ul {
+    margin-top: 20px;
+  }
+  .hobbies-section ul li {
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+  /* This code is for the contact section of the page */
+  .contact {
+    padding: 5px;
+    margin-top: 200px;
+    height: 150px;
+  }
+  .contact h2 {
+    color: #6e6e6e;
+    font-size: 1.5em;
+  }
+  .contact a {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .contact a button {
+    padding: 5px 10px;
+    font-size: 1em;
+  }
+  .contact a button:hover {
+    padding: 5px 15px;
+  }
+  .contact #myForm {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .contact #myForm input {
+    font-size: 1em;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    width: 400px;
+  }
+  .contact #myForm textarea {
+    border-radius: 3px;
+    font-size: 1em;
+    width: 405px;
+    height: 150px;
+  }
+  /* This is the code for the footer text and image logos */
+  .footer img {
+    height: 40px;
+    width: 40px;
+  }
+  .footer h3 {
+    font-size: 1.4em;
+    /* This is the code for the links in the footer */
+  }
+  .footer h3 a {
+    color: white;
+  }
+  .footer h3 a:hover {
+    color: #05aefc;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1030px) {
+  /* This is the code for the navigation bar */
+  #navbar {
+    font-size: 1.3em;
+    word-spacing: 30px;
+  }
+  .grid-container > div {
+    padding: 10px;
+  }
+  .margin-wrapper {
+    margin-right: 150px;
+    margin-left: 150px;
+  }
+  /* This is the code for the home screen text and picture */
+  .home-screen {
+    height: 700px;
+  }
+  .home-screen h1 {
+    margin-top: 120px;
+    font-size: 2.9em;
+    letter-spacing: 3px;
+    color: #939393;
+  }
+  .home-screen h4 {
+    margin-top: 10px;
+    font-size: 2em;
+    letter-spacing: 3px;
+    color: #939393;
+  }
+  /* This is the code for the about section of the page */
+  .about {
+    margin-top: 250px;
+    height: 360px;
+    padding: 5px;
+    /* This is the code for the text inside the about section */
+  }
+  .about .box-about {
+    height: 99%;
+    /* Box about heading and paragraph font sizes */
+  }
+  .about .box-about h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  .about .box-about p {
+    font-size: 1.4em;
+  }
+  /* This is the code for the Programming Languages Bar */
+  .prog-lang {
+    padding: 0;
+    opacity: 0;
+    margin-top: 250px;
+    height: 500px;
+  }
+  .prog-lang .margin-wrapper {
+    margin-right: 150px;
+    margin-left: 150px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'prog-head prog-content';
+    -ms-grid-columns: 30% 1fr;
+        grid-template-columns: 30% 1fr;
+  }
+  .prog-lang .margin-wrapper .prog-head {
+    height: 50px;
+    position: relative;
+  }
+  .prog-lang .margin-wrapper .prog-head h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
+  .prog-lang .margin-wrapper .prog-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: prog-content;
+    border: none;
+    height: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  /* This code is for the studies and hobbies section of the page */
+  .studies {
+    opacity: 0;
+    margin-top: 250px;
+    height: 620px;
+  }
+  .studies .studies-section {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'stud-first' 'stud-second';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .studies .studies-section h3 {
+    font-size: 1.3em;
+  }
+  .studies .studies-section p {
+    font-size: 1.1em;
+    word-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .experience-section {
+    height: 600px;
+  }
+  .experience-section h2, .experience-section h3 {
+    text-align: center;
+    font-size: 1.6em;
+  }
+  .experience-section h4 {
+    margin-top: 40px;
+    font-size: 1.3em;
+  }
+  .experience-section p {
+    font-size: 1.1em;
+    margin-left: 30px;
+  }
+  .hobbies-section {
+    padding: 0px;
+    height: 380px;
+  }
+  .hobbies-section h2 {
+    font-weight: bolder;
+    font-size: 1.6em;
+  }
+  .hobbies-section ul {
+    margin-top: 20px;
+  }
+  .hobbies-section ul li {
+    font-size: 1.4em;
+    margin-top: 10px;
+  }
+  /* This code is for the contact section of the page */
+  .contact {
+    padding: 5px;
+    margin-top: 200px;
+    height: 150px;
+  }
+  .contact h2 {
+    color: #6e6e6e;
+    font-size: 1.5em;
+  }
+  .contact a {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .contact a button {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+  .contact a button:hover {
+    padding: 10px 25px;
+  }
+  .contact #myForm {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .contact #myForm input {
+    font-size: 1em;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    width: 500px;
+  }
+  .contact #myForm textarea {
+    border-radius: 3px;
+    font-size: 1.2em;
+    width: 505px;
+    height: 150px;
+  }
+  /* This is the code for the footer text and image logos */
+  .footer img {
+    height: 40px;
+    width: 40px;
+  }
+  .footer h3 {
+    font-size: 1.4em;
+    /* This is the code for the links in the footer */
+  }
+  .footer h3 a {
+    color: white;
+  }
+  .footer h3 a:hover {
+    color: #05aefc;
+    text-decoration: underline;
+  }
+}
+/*# sourceMappingURL=style.css.map */

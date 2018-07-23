@@ -1,0 +1,430 @@
+/* This is the code for the grid container */
+
+/* MIXINS */
+@mixin backImgSettings{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin skillsImg {
+    height: 90px;
+    width: 18%;
+    float: left;
+    border: $borderSettings;
+    img{
+        height: 70%;
+        width: 90%;
+    }
+}
+@mixin skillsBar{
+    float: left;
+    margin-left: 20px;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+
+/* VARIABLES */
+// $borderSettings: 1px solid black;
+$borderSettings: none;
+
+*{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 'navbar'
+    'home-screen'
+    'about'
+    'prog-lang'
+    'studies'
+    'experience-section'
+    'hobbies-section'
+    'contact'
+    'footer'
+    ;
+    grid-template-columns: 1fr;
+    // grid-gap: 20px;
+}
+.grid-container > div{
+    padding: 20px;
+}
+  
+/* This is the code for the navigation bar */
+#navbar{
+    top: -100px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    grid-area: navbar;
+    padding: 20px;
+    font-size: 1.6em;
+    word-spacing: 60px;
+    text-align: center;
+    z-index: 100;
+    transition: all 1s;
+
+    a{
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s;
+        &:hover{
+            border-bottom-color: black;
+        }
+    }
+}
+  
+  
+/* This is the code for the home screen text and picture */
+.home-screen{
+    grid-area: home-screen;
+    text-align: center;
+    background: url('../images/beach-pic.jpg');
+    @include backImgSettings;
+    // background-attachment: fixed;
+    height: 700px;
+
+    h1{
+        margin-top: 120px;
+        font-size: 4em;
+        letter-spacing: 3px;
+        color: #939393;
+      }
+      h4{
+        font-size: 1.4em;
+        letter-spacing: 3px;
+        color: #939393;
+      }
+}
+
+.margin-wrapper{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* This is the code for the about section of the page */
+.about{
+    grid-area: about;
+    opacity: 0;
+    margin-top: 250px;
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+    height: 330px;
+    padding: 10px;
+    display: block;
+    box-shadow: 5px 10px 20px #333;
+    transition: all 1s;
+
+    /* This is the code for the text inside the about section */
+    .box-about{
+        float: right;
+        height: 99%;
+
+        /* Box about heading and paragraph font sizes */
+        h2{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p{
+            text-align: center;
+            font-size: 1.5em;
+        }
+    }
+}
+  
+/* This is the code for the Programming Languages Bar */
+.prog-lang{
+    grid-area: prog-lang;
+    opacity: 0;
+    margin-top: 250px;
+    background-color: #ebebebc4;
+    text-align: center;
+    box-shadow: 5px 10px 20px #ebebeb;
+    height: 450px;
+    transition: all 1s;
+
+    .margin-wrapper{
+        margin-right: 200px;
+        margin-left: 200px;
+        display: grid;
+        grid-template-areas: 'prog-head prog-content';
+        grid-template-columns: 30% 1fr;
+
+        .prog-head{
+            grid-area: prog-head;
+            border: $borderSettings;
+            height: 450px;
+            position: relative;
+
+            h2{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2em;
+            }
+        }
+        .prog-content{
+            grid-area: prog-content;
+            border: $borderSettings;
+            height: 450px;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding: 10px;
+
+            .prog-box{
+                margin-top: 20px;
+                height: 90px;
+                border: $borderSettings;
+
+                .html-img{
+                    @include skillsImg;
+                }
+                .html-bar{
+                    background: rgb(255, 102, 0);
+                    @include skillsBar;
+
+                    #html-percent{
+                        width: 0%;
+                    }
+                }
+
+                .css-img{
+                    @include skillsImg;
+                }
+                .css-bar{
+                    background: rgb(3, 122, 190);
+                    @include skillsBar;
+
+                    #css-percent{
+                        width: 0%;
+                    }
+                }
+
+                .js-img{
+                    @include skillsImg;
+                }
+                .js-bar{
+                    background: rgb(194, 207, 5);
+                    @include skillsBar;
+
+                    #js-percent{
+                        width: 0%;
+                    }
+                }
+
+                .python-img{
+                    @include skillsImg;
+                }
+                .python-bar{
+                    background: rgb(1, 187, 41);
+                    @include skillsBar;
+
+                    #python-percent{
+                        width: 0%;
+                    }
+                }
+            }
+        }
+    }
+}
+  
+/* This code is for the studies and hobbies section of the page (blue) */
+.studies{
+    grid-area: studies;
+    opacity: 0;
+    margin-top: 250px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.842);
+    box-shadow: 5px 10px 20px #333;
+    transition: all 1s;
+
+    .studies-section{
+        display: grid;
+        grid-template-areas: 'stud-first stud-second'
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+        color: white;
+
+        h3{
+            font-size: 1.5em;
+        }
+        p{
+            word-spacing: 2px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        #stud-first{
+            grid-area: stud-first;
+        }
+
+        #stud-second{
+            grid-area: stud-second;
+        }
+    }
+}
+
+
+.experience-section{
+    grid-area: experience-section;
+    height: 600px;
+    opacity: 0;
+    margin-top: 250px;
+    background-color: #ebebebc4;
+    box-shadow: 5px 10px 20px #ebebeb;
+    color: grey;
+    transition: all 1s;
+
+    h2, h3{
+        text-align: center;
+        font-size: 2em;
+    }
+    h4{
+        margin-top: 40px;
+        font-size: 1.3em;
+    }
+    p{
+        font-size: 1.2em;
+        margin-left: 80px;
+    }
+}
+  
+.hobbies-section{
+    grid-area: hobbies-section;
+    height: 350px;
+    opacity: 0;
+    margin-top: 250px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
+    transition: all 1s;
+
+    h2{
+        font-weight: bolder;
+    }
+    ul{
+        margin-top: 20px;
+        list-style: none;
+        li{
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+    }
+}
+
+/* This code is for the contact section of the page */
+.contact{
+    grid-area: contact;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    height: 150px;
+    box-shadow: 5px 5px 20px rgb(235, 235, 235);
+    background-color: rgba(235, 235, 235, 0.842);
+    position: relative;
+    transition: all 0.5s;
+
+    h2{
+        text-align: center;
+        color: rgb(110, 110, 110);
+    }
+
+    a{
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
+        transition: all 0.3s;
+
+        button{
+            padding: 10px 20px;
+            background: linear-gradient(to right, #7474BF, #348AC7);
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 1.3em;
+            overflow: hidden;
+            transition: all 0.3s;
+
+            &:hover{
+                padding: 10px 25px;
+            }
+        }
+    }
+
+    #myForm{
+        display: none;
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%,-50%);
+
+        input{
+            font-size: 1.1em;
+            border: none;
+            border-radius: 3px;
+            padding: 6px;
+            width: 600px;
+            outline-color: green;
+        }
+        textarea{
+            border-radius: 3px;
+            font-size: 1.1em;
+            border: none;
+            resize: none;
+            width: 610px;
+        }
+        button{
+            padding: 10px 15px;
+            border-radius: 3px;
+            background: linear-gradient(to right, #1efa29, rgb(0, 201, 27));
+            color: white;
+            border: none;
+            outline: none;
+            outline-color: green;
+            font-size: 1em;
+            margin-left: 38%;
+            transition: all 0.3s;
+            &:hover{
+                padding: 10px 22px;
+            }
+        }
+    }
+}
+
+  
+/* This is the code for the footer text and image logos */
+.footer{
+    grid-area: footer;
+    background: linear-gradient(to left, #000000, #4b4b4b);
+
+    h3{
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+    
+        /* This is the code for the links in the footer */
+        a{
+            color: white;
+    
+            &:hover{
+                color: #05aefc;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Import responsiveness stylesheet
+@import 'responsive';
+  

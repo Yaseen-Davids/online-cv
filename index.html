@@ -2,16 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yaseen Davids</title>
     <!-- This is the link for my css styling -->
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <!-- This is the link of my css for device screens -->
-    <link rel="stylesheet" href="./css/device.css" type="text/css">
-
-    <script src="./js/script.js"></script>
-
+    <link rel="stylesheet" href="./sass/style.css" type="text/css">
+    <link rel="icon" type="favicon" href="./images/yd-logo.jpg">
     <!-- This is the link to the font I used -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   </head>
   <body>
 
@@ -20,12 +18,17 @@
 
       <!-- This is the grid container that creates the grids -->
       <div class="grid-container">
+
         <!-- This is the navigation bar -->
-        <div id="navbar">
-          <a href="#takeMeHome" onclick="takeMeHome()">Home</a>
-          <a href="#about" onclick="goToAbout()">About</a>
-          <a href="#contact" onclick="goToContact()">Contact</a>
-        </div>
+        <nav>
+          <div id="navbar">
+            <a href="#about" id="goToAbout">About</a>
+            <a href="#skills" id="goToSkills">Skills</a>
+            <a href="#education" id="goToStud">Education</a>
+            <a href="#experience" id="goToExp">Experience</a>
+            <a href="#contact" id="goToCont">Contact</a>
+          </div>
+        </nav>
 
         <!-- This is the home screen text and image -->
         <div class="home-screen" id="home-screen">
@@ -34,62 +37,148 @@
         </div>
 
         <!-- This is the about section of the page -->
-        <div class="about" id="goToAbout">
-          <div class="box-image"></div>
-          <div class="box-about">
-            <h2>About :</h2>
-            <p>I am a very hardworking and ambitious person with a passion for working with Computers and People. I’ve been building computers since i was 9 years old, and only recently i’ve gotten into the software side of computers. I’ve started developing a game using python, and i have created multiple scripts using python that i use on a daily basis. I am a very curious person and i believe that my curiosity is what makes me keep moving forward, opening new doors, and doing new things.</p></div>
+        <div class="about" id="about-section">
+          <!-- This is the margin wrapper that wraps everything to the center -->
+          <div class="margin-wrapper">
+            <div class="box-about">
+              <h2>About Me :</h2>
+              <p>I am a very hardworking and ambitious person with a passion for working with Computers and People. I’ve been building computers since i was 9 years old, and recently i’ve gotten into the software side of computers. I've developed many websites while completing a Full Stack Development Course. I am a very curious person and i believe that my curiosity is what makes me keep moving forward, opening new doors, and doing new things. I am eager to be challenged in order to grow and improve my skills.</p>
+            </div>
+          </div>
         </div>
 
         <!-- This is the Programming Languages of the page -->
-        <div class="prog-lang">
-          <h2>Skills : </h2>
-          <div class="prog-box1"></div>
-          <div class="prog-box2"></div>
-          <div class="prog-box3"></div>
-          <div class="prog-box4"></div>
-          <div class="prog-box5"></div>
-          <div class="prog-box6"></div>
+        <div class="prog-lang" id="skills-section">
+          <!-- This is the margin wrapper that wraps everything to the center -->
+          <div class="margin-wrapper">
+            <!-- This is the programming header -->
+            <div class="prog-head">
+              <h2>Skills</h2>
+            </div>
+            <!-- This is the programming section content -->
+
+            <div class="prog-content">
+
+              <div class="prog-box">
+                <!-- HTML 5 Section -->
+                <div class="html-img">
+                  <img src="images/html5.png">
+                  HTML 5
+                </div>
+                <div class="html-bar" id="html-percent">
+                  <h4>100%</h4>
+                </div>
+              </div>
+
+              <!-- CSS Section -->
+              <div class="prog-box">
+                <div class="css-img">
+                  <img src="images/css.png">
+                  CSS
+                </div>
+                <div class="css-bar" id="css-percent">
+                  <h4>90%</h4>
+                </div>
+              </div>
+
+              <!-- JAVASCRIPT Section -->
+              <div class="prog-box">
+                <div class="js-img">
+                  <img src="images/javascript.png">
+                  JAVASCRIPT
+                </div>
+                <div class="js-bar" id="js-percent">
+                  <h4>50%</h4>
+                </div>
+              </div>
+
+              <!-- PYTHON Section -->
+              <div class="prog-box">
+                <div class="python-img">
+                  <img src="images/python.png">
+                  PYTHON
+                </div>
+                <div class="python-bar" id="python-percent">
+                  <h4>20%</h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
         <!-- This is the code for my info on studies -->
-        <div class="studies">
-          <!-- Secondary Education -->
-          <div class="stu-box">
-            <h3>Secondary Education</h3>
-            </br>
-            <p><u>School</u> : Harold Cressy High School </p>
-            <p><u>Year</u> : 2013-2017</p>
-            <p><u>Qualification</u> : NSC - Bachelors</p>
-            <p><u>Subjects</u> : Physical Science, Life Science, Mathematics, English, Geography</p>
+        <div class="studies" id="stud-section">
+          <!-- This is the margin wrapper that wraps everything to the center -->
+          <div class="margin-wrapper">
+
+            <!-- This is the studies section -->
+            <div class="studies-section">
+
+              <!-- Secondary education section -->
+              <div id="stud-first">
+
+                <!-- Secondary Education -->
+                <h3>Secondary Education :</h3>
+                <br>
+                <h3><u>Harold Cressy High School</u></h3>
+                <p><u>Year</u> : 2013-2017</p>
+                <p><u>Qualification</u> : NSC - Bachelors</p>
+                <p><u>Subjects</u> : Physical Science, Life Science, Mathematics, Geography</p>
+
+              </div>
+
+              <!-- Tertiary Education Section -->
+              <div id="stud-second">
+
+                <!-- Tertiary Education -->
+                <h3>Tertiary Education :<h3>
+                <br>
+                <h3><u>Life Choices Academy</u></h3>
+                <p><u>Year</u> : 2018 (March - August)</p>
+                <p><u>Period</u> : 6 months</p>
+                <p><u>Course</u> : Front end web development</p>
+                <p><u>Subjects</u> : Programming, professional development, design thinking</p>
+                <p><u>Programming Languages</u> : HTML and Bootstrap Framework, CSS (SASS and SCSS), Javascript (Node.js, Express.js, Mongoose,jQuery, React.js), Mongodb, MySQL</p>
+
+              </div>
+            </div>
           </div>
-          <!-- Tertiary Education -->
-          <div class="stu-box">
-            <h3>Tertiary Education<h3>
-            <h4>Life Choices Academy</h4>
-            <p><u>Period</u> : 6 months</p>
-            <p><u>Course</u> : Front end web development</p>
-            <p><u>Subjects</u> : Programming, professional development, design thinking</p>
-            <p><u>Programming Languages</u> : HTML and Bootstrap Framework, CSS (SASS and SCSS), Javascript (Node.js, Express.js, Mongoose,jQuery, React.js), Mongodb, MySQL</p>
-          </div>
-          <!-- Job Shadowing -->
-          <div class="stu-box">
-            <h3>Job Shadowing:</h3>
+        </div>
+
+        <!-- This is the work experience section -->
+        <div class="experience-section" id="exp-section">
+
+          <!-- This is the margin wrapper that wraps everything to the center -->     
+          <div class="margin-wrapper">
+            <h2>Experience</h2>
+            <br>
+            <h3>Job Shadowing :</h3>
             <h4>Sanlam Head Office (Web Developing)</h4>
             <p>At Sanlam, I was taught how to make Websites using Wordpress.</p>
             <p><u>Period</u> : 2 Weeks</p>
-            <br>
+            
+            <p><u>Reference</u> : Ebrahim Ismail - 082 777 2349</p>
+
             <h4>Dial a Nerd (Computer Technician)</h4>
             <p>At Dial a Nerd, I spent one day in the field with a Dial a Nerd employee, and one day inside the building. I was taught how to fix Internet and hardware issues.</p>
             <p><u>Period</u> : Two Days</p>
-            <br>
+            <p><u>Reference</u> : Hayden - 061 363 3558</p>
+
             <h4>Teaching Coding during High School</h4>
             <p>At school I was in charge on teaching a classroom full of students coding. I taught the students scratch for two years and this is how I was introduced to Coding/Programming.</p>
             <p><u>Period</u> : Two Years</p>
+            <p><u>Reference</u> : David De Storie - 081 509 8179 - destoried@gmail.com</p>
+
           </div>
-          <!-- Hobbies and Interests List -->
-          <div class="stu-box">
-            <h3>Hobbies and Interests</h3>
+
+        </div>
+
+        <!-- This is the hobbies and interests section -->
+        <div class="hobbies-section" id="hob-section">
+          <!-- This is the margin wrapper that wraps everything to the center -->
+          <div class="margin-wrapper">
+            <h2>Hobbies / Interests :</h2>
             <ul>
               <li>Soccer</li>
               <li>Video Games</li>
@@ -104,46 +193,25 @@
         </div>
 
         <!-- This is the content section of the page that includes my contact details -->
-        <div class="contact" id="goToContact">
-          <!-- References Section -->
-          <div class="contact-box1">
-            <h3 class="ref">References: </h3>
-            <br>
-            <h4>High School Coding</h4>
-            <p>David De Storie - 081 509 8179 - destoried@gmail.com</p>
-            <h4>Sanlam Head Office</h4>
-            <p>Ebrahim Ismail - 082 777 2349</p>
-            <h4>Dial a Nerd</h4>
-            <p>Hayden - 061 363 3558</p>
-          </div>
+        <div class="contact" id="contact-section">
 
-          <!-- Contact details section -->
-          <div class="contact-box2">
-            <!-- Contact Information -->
-            <div class="info-cont">
-              <h3 class="ref">Contact Details : </h3>
-              <br>
-              <!-- Phone number box and info -->
-              <div class="phone-numbox">
-                <div class="phone-logo"></div>
-                <p class="p-number">061 647 8942</p>
-              </div>
-              <br>
-              <br>
-              <!-- Email box and info -->
-              <div class="email-box">
-                <div class="email-logo"></div>
-                <p class="email">yaseendavids477@gmail.com</p>
-              </div>
-              <br>
-              <br>
-              <!-- Blog box and info -->
-              <div class="blog-box">
-                <div class="blog-logo"></div>
-                <p class="blog"><a href="http://yaseendavids.blogspot.co.za/" target="_blank">Blog</a></p>
-              </div>
-            </div>
-          </div>
+          <h2>See Something You Like ?</h2>
+
+          <a href="#contactMe" id="contactMe-button"><button>Contact Me</button></a>
+
+          <form id="myForm">
+            <input type="text" name="yourName" placeholder="Your Name here" required>
+            <br>
+            <br>
+            <input type="email" name="yourEmail" placeholder="Your Email here" required>
+            <br>
+            <br>
+            <textarea name="yourMsg" rows="5" cols="36" placeholder="Your Message here"></textarea>
+            <br>
+            <br>
+            <button id="submit">Submit</button>
+          </form>
+
         </div>
 
         <!-- This is the footer of the page which includes my name with website link and social media logos -->
@@ -156,6 +224,10 @@
       </div>
 
     </div>
+
+    <!-- Javscript links -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
 
   </body>
 </html>
