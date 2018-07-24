@@ -177,6 +177,10 @@
   border: none;
 }
 
+.prog-lang .margin-wrapper .prog-content .prog-box h4 {
+  color: white;
+}
+
 .prog-lang .margin-wrapper .prog-content .prog-box .html-img {
   height: 90px;
   width: 18%;
@@ -310,6 +314,7 @@
   word-spacing: 2px;
   margin-top: 20px;
   margin-left: 20px;
+  font-size: 1.1em;
 }
 
 .studies .studies-section #stud-first {
@@ -358,7 +363,7 @@
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: hobbies-section;
-  height: 350px;
+  height: 550px;
   opacity: 0;
   margin-top: 250px;
   text-align: center;
@@ -381,6 +386,16 @@
 .hobbies-section ul li {
   font-size: 1.4em;
   margin-top: 10px;
+}
+
+.hobbies-section ul li a {
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hobbies-section ul li a:hover {
+  text-decoration: none;
 }
 
 /* This code is for the contact section of the page */
@@ -629,7 +644,7 @@
   }
   .hobbies-section {
     padding: 0;
-    height: 320px;
+    height: 470px;
   }
   .hobbies-section h2 {
     font-weight: bolder;
@@ -683,11 +698,12 @@
     border: none;
     border-radius: 3px;
     padding: 2px;
-    width: 100%;
+    width: 300px;
   }
   .contact #myForm textarea {
     border-radius: 3px;
     font-size: 1em;
+    width: 300px;
   }
   /* This is the code for the footer text and image logos */
   .footer img {
@@ -716,7 +732,7 @@
   }
   .hobbies-section {
     padding: 0;
-    height: 300px;
+    height: 450px;
   }
 }
 
@@ -729,7 +745,7 @@
   }
   .hobbies-section {
     padding: 0;
-    height: 300px;
+    height: 450px;
   }
 }
 
@@ -742,7 +758,7 @@
   }
   .hobbies-section {
     padding: 0;
-    height: 300px;
+    height: 450px;
   }
   .studies {
     height: 550px;
@@ -902,7 +918,7 @@
   }
   .hobbies-section {
     padding: 0px;
-    height: 350px;
+    height: 500px;
   }
   .hobbies-section h2 {
     font-weight: bolder;
@@ -1107,7 +1123,7 @@
   }
   .hobbies-section {
     padding: 0px;
-    height: 380px;
+    height: 570px;
   }
   .hobbies-section h2 {
     font-weight: bolder;
