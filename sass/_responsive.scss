@@ -232,6 +232,33 @@ and (max-width: 599px){
             }
         }
     }
+
+    // This is the contact logo
+    #contact-me-logo{
+        position: fixed;
+        top: 100px;
+        right: -100px;
+
+        img{
+            height: 50%;
+            width: 50%;
+        }
+    }
+
+    // This is the contact me main section
+    #contact-me-main{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 20px;
+        width: 70%;
+
+        h3{
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 // *************************************************************************
@@ -354,6 +381,18 @@ and (max-width: 800px){
             font-size: 1.7em;
             letter-spacing: 3px;
             color: #939393;
+        }
+    }
+
+    // This is the contact logo
+    #contact-me-logo{
+        position: fixed;
+        top: 100px;
+        right: -100px;
+
+        img{
+            height: 70%;
+            width: 70%;
         }
     }
 

@@ -44,6 +44,10 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop: theContPos}, 1500);
     });
 
+    $("#contact-me-logo").on('click', function(){
+        $("#contact-me-main").fadeToggle('slow', 'linear');
+    })
+
     onscroll = function(){
 
         let skillsPos = document.getElementById("skills-section").offsetTop - 400;
@@ -54,6 +58,7 @@ $(document).ready(function(){
         if (window.scrollY >= 500){
             $("#about-section").css('opacity', '1');
             $("#about-section").css('margin-top', '200px');
+            $("#contact-me-logo").css('right', '10px');
         }
 
         if (window.scrollY >= skillsPos){
@@ -80,6 +85,10 @@ $(document).ready(function(){
         if (window.scrollY >= hobPos) {
             $("#hob-section").css('opacity', '1');
             $("#hob-section").css('margin-top', '200px');
+        }
+
+        else if (window.scrollY < 500){
+            $("#contact-me-logo").css('right', '-100px');
         }
     }
 })

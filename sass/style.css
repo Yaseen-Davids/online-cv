@@ -74,6 +74,34 @@
   color: #939393;
 }
 
+#contact-me-logo {
+  position: fixed;
+  top: 100px;
+  right: -100px;
+  z-index: 10000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#contact-me-main {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: black;
+  color: white;
+  z-index: 10000;
+  padding: 20px;
+}
+
+#contact-me-main h3 {
+  font-weight: lighter;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .margin-wrapper {
   margin-left: 200px;
   margin-right: 200px;
@@ -721,6 +749,28 @@
     color: #05aefc;
     text-decoration: underline;
   }
+  #contact-me-logo {
+    position: fixed;
+    top: 100px;
+    right: -100px;
+  }
+  #contact-me-logo img {
+    height: 50%;
+    width: 50%;
+  }
+  #contact-me-main {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 70%;
+  }
+  #contact-me-main h3 {
+    font-size: 0.9em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 400px) {
@@ -821,6 +871,15 @@
     font-size: 1.7em;
     letter-spacing: 3px;
     color: #939393;
+  }
+  #contact-me-logo {
+    position: fixed;
+    top: 100px;
+    right: -100px;
+  }
+  #contact-me-logo img {
+    height: 70%;
+    width: 70%;
   }
   /* This is the code for the about section of the page */
   .about {

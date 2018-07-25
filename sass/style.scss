@@ -101,6 +101,34 @@ $borderSettings: none;
       }
 }
 
+// This is the contact logo
+#contact-me-logo{
+    position: fixed;
+    top: 100px;
+    right: -100px;
+    z-index: 10000;
+    transition: all 1s;
+}
+
+// This is the contact me main section
+#contact-me-main{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: black;
+    color: white;
+    z-index: 10000;
+    padding: 20px;
+
+    h3{
+        font-weight: lighter;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
 .margin-wrapper{
     margin-left: 200px;
     margin-right: 200px;
