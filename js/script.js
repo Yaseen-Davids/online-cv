@@ -4,7 +4,6 @@ $(document).ready(function(){
     // This is the code for the navbar (position)
     $("#navbar").css('top', '0px');
 
-
     /* This is the code for the form */
     $("#contactMe-button").on('click', function() {
         $(this).fadeOut('500');
