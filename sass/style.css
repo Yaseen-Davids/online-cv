@@ -207,7 +207,7 @@
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: all-projects;
-  margin-top: 20px;
+  margin-top: 40px;
   background: rgba(0, 0, 0, 0.856);
   height: 700px;
 }
@@ -227,6 +227,7 @@
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  opacity: 0;
 }
 
 .all-projects #projects-main h4 {

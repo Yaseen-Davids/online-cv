@@ -196,7 +196,7 @@ $headerColor: rgb(36, 36, 59);
 
 .all-projects{
     grid-area: all-projects;
-    margin-top: 20px;
+    margin-top: 40px;
     background: rgba(0, 0, 0, 0.856);
     height: 700px;
 
@@ -215,6 +215,7 @@ $headerColor: rgb(36, 36, 59);
         ;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
+        opacity: 0;
 
         h4{
             text-align: center;
