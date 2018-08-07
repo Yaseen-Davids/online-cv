@@ -19,7 +19,6 @@ $(document).ready(function(){
     });
 
     let aboutPos = document.getElementById("about-section").offsetTop - 200;
-    let theSkillsPos = document.getElementById("skills-section").offsetTop - 200;
     let theStudPos = document.getElementById("stud-section").offsetTop - 300;
     let theExpPos = document.getElementById("exp-section").offsetTop - 300;
     let theContPos = document.getElementById("contact-section").offsetTop - 300;
@@ -27,10 +26,6 @@ $(document).ready(function(){
     $("#goToAbout").on('click', function(){
         $('html, body').animate({scrollTop: aboutPos}, 1500);
     });
-
-    $("#goToSkills").on('click', function(){
-        $('html, body').animate({scrollTop: theSkillsPos}, 1500);
-    })
 
     $("#goToStud").on('click', function(){
         $('html, body').animate({scrollTop: theStudPos}, 1500);
@@ -50,7 +45,6 @@ $(document).ready(function(){
 
     onscroll = function(){
 
-        let skillsPos = document.getElementById("skills-section").offsetTop - 400;
         let studPos = document.getElementById("stud-section").offsetTop - 500;
         let expPos = document.getElementById("exp-section").offsetTop - 400;
         let hobPos = document.getElementById("hob-section").offsetTop - 500;
@@ -59,17 +53,6 @@ $(document).ready(function(){
             $("#about-section").css('opacity', '1');
             $("#about-section").css('margin-top', '200px');
             $("#contact-me-logo").css('right', '10px');
-        }
-
-        if (window.scrollY >= skillsPos){
-            $("#skills-section").css('opacity', '1');
-            $("#skills-section").css('margin-top', '200px');
-
-            /* This is the code for the progress bars */
-            $("#html-percent").animate({width :'70%'}, 2000);
-            $("#css-percent").animate({width :'60%'}, 2000);
-            $("#js-percent").animate({width :'35%'}, 2000);
-            $("#python-percent").animate({width :'17%'}, 2000);
         }
 
         if (window.scrollY >= studPos){

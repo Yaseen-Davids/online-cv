@@ -7,24 +7,6 @@
     background-size: cover;
 }
 
-@mixin skillsImg {
-    height: 90px;
-    width: 18%;
-    float: left;
-    border: $borderSettings;
-    img{
-        height: 70%;
-        width: 90%;
-    }
-}
-@mixin skillsBar{
-    float: left;
-    margin-left: 20px;
-    height: 40px;
-    margin-top: 15px;
-    border-radius: 3px;
-}
-
 /* VARIABLES */
 // $borderSettings: 1px solid black;
 $borderSettings: none;
@@ -163,107 +145,6 @@ $borderSettings: none;
         p{
             text-align: center;
             font-size: 1.5em;
-        }
-    }
-}
-  
-/* This is the code for the Programming Languages Bar */
-.prog-lang{
-    grid-area: prog-lang;
-    opacity: 0;
-    margin-top: 250px;
-    background-color: #ebebebc4;
-    text-align: center;
-    box-shadow: 5px 10px 20px #ebebeb;
-    height: 450px;
-    transition: all 1s;
-
-    .margin-wrapper{
-        margin-right: 200px;
-        margin-left: 200px;
-        display: grid;
-        grid-template-areas: 'prog-head prog-content';
-        grid-template-columns: 30% 1fr;
-
-        .prog-head{
-            grid-area: prog-head;
-            border: $borderSettings;
-            height: 450px;
-            position: relative;
-
-            h2{
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 2em;
-            }
-        }
-        .prog-content{
-            grid-area: prog-content;
-            border: $borderSettings;
-            height: 450px;
-            margin-left: 100px;
-            margin-right: 100px;
-            padding: 10px;
-
-            .prog-box{
-                margin-top: 20px;
-                height: 90px;
-                border: $borderSettings;
-
-                h4{
-                    color: white;
-                }
-
-                .html-img{
-                    @include skillsImg;
-                }
-                .html-bar{
-                    background: rgb(255, 102, 0);
-                    @include skillsBar;
-
-                    #html-percent{
-                        width: 0%;
-                    }
-                }
-
-                .css-img{
-                    @include skillsImg;
-                }
-                .css-bar{
-                    background: rgb(3, 122, 190);
-                    @include skillsBar;
-
-                    #css-percent{
-                        width: 0%;
-                    }
-                }
-
-                .js-img{
-                    @include skillsImg;
-                }
-                .js-bar{
-                    background: rgb(194, 207, 5);
-                    @include skillsBar;
-
-                    #js-percent{
-                        width: 0%;
-                    }
-                }
-
-                .python-img{
-                    @include skillsImg;
-                }
-                .python-bar{
-                    background: rgb(1, 187, 41);
-                    @include skillsBar;
-
-                    #python-percent{
-                        width: 0%;
-                    }
-                }
-            }
         }
     }
 }
