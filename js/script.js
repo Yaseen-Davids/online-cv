@@ -51,23 +51,23 @@ $(document).ready(function(){
         
         if (window.scrollY >= 500){
             $("#about-section").css('opacity', '1');
-            $("#about-section").css('margin-top', '200px');
+            $("#about-section").css('margin-top', '20px');
             $("#contact-me-logo").css('right', '10px');
         }
 
         if (window.scrollY >= studPos){
             $("#stud-section").css('opacity', '1');
-            $("#stud-section").css('margin-top', '200px');
+            $("#stud-section").css('margin-top', '20px');
         }
 
         if (window.scrollY >= expPos){
             $("#exp-section").css('opacity', '1');
-            $("#exp-section").css('margin-top', '200px');
+            $("#exp-section").css('margin-top', '20px');
         }
 
         if (window.scrollY >= hobPos) {
             $("#hob-section").css('opacity', '1');
-            $("#hob-section").css('margin-top', '200px');
+            $("#hob-section").css('margin-top', '20px');
         }
 
         else if (window.scrollY < 500){

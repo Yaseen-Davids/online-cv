@@ -10,6 +10,7 @@
 /* VARIABLES */
 // $borderSettings: 1px solid black;
 $borderSettings: none;
+$headerColor: rgb(36, 36, 59);
 
 *{
     margin: 0;
@@ -21,15 +22,15 @@ $borderSettings: none;
     grid-template-areas: 'navbar'
     'home-screen'
     'about'
-    'prog-lang'
     'studies'
     'experience-section'
+    'all-projects'
     'hobbies-section'
     'contact'
     'footer'
     ;
     grid-template-columns: 1fr;
-    // grid-gap: 20px;
+    background: rgb(0, 0, 0);
 }
 .grid-container > div{
     padding: 20px;
@@ -120,13 +121,12 @@ $borderSettings: none;
 .about{
     grid-area: about;
     opacity: 0;
-    margin-top: 250px;
-    background-color: rgba(0, 0, 0, 0.842);
-    color: white;
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.952);
+    color: $headerColor;
     height: 330px;
     padding: 10px;
     display: block;
-    box-shadow: 5px 10px 20px #333;
     transition: all 1s;
 
     /* This is the code for the text inside the about section */
@@ -153,10 +153,9 @@ $borderSettings: none;
 .studies{
     grid-area: studies;
     opacity: 0;
-    margin-top: 250px;
-    height: 400px;
+    margin-top: 40px;
+    height: 620px;
     background-color: rgba(0, 0, 0, 0.842);
-    box-shadow: 5px 10px 20px #333;
     transition: all 1s;
 
     .studies-section{
@@ -190,12 +189,11 @@ $borderSettings: none;
 
 .experience-section{
     grid-area: experience-section;
-    height: 600px;
+    height: 630px;
     opacity: 0;
-    margin-top: 250px;
-    background-color: #ebebebc4;
-    box-shadow: 5px 10px 20px #ebebeb;
-    color: grey;
+    margin-top: 40px;
+    background: linear-gradient(to left, #4b6cb7, #182848);
+    color: white;
     transition: all 1s;
 
     h2, h3{
@@ -211,15 +209,79 @@ $borderSettings: none;
         margin-left: 80px;
     }
 }
+
+.all-projects{
+    grid-area: all-projects;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.856);
+    height: 700px;
+
+    h2{
+        margin-top: 20px;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #projects-main{
+        margin-top: 30px;
+        display: grid;
+        grid-template-areas: 'project1 project2'
+        'project3 project4'
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+        h4{
+            text-align: center;
+            color: white;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            transition: all 1s;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+        #project1{
+            grid-area: project1;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #project2{
+            grid-area: project2;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #project3{
+            grid-area: project3;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #project4{
+            grid-area: project4;
+            height: 300px;  
+            overflow: hidden;
+        }
+    }
+}
   
 .hobbies-section{
     grid-area: hobbies-section;
-    height: 550px;
+    height: 350px;
     opacity: 0;
-    margin-top: 250px;
+    margin-top: 40px;
     text-align: center;
-    color: white;
-    background: linear-gradient(to right, #c2e59c, #64b3f4);
+    color: $headerColor;
+    background: white;
     transition: all 1s;
 
     h2{
@@ -246,17 +308,16 @@ $borderSettings: none;
 /* This code is for the contact section of the page */
 .contact{
     grid-area: contact;
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     height: 150px;
-    box-shadow: 5px 5px 20px rgb(235, 235, 235);
     background-color: rgba(235, 235, 235, 0.842);
     position: relative;
     transition: all 0.5s;
 
     h2{
         text-align: center;
-        color: rgb(110, 110, 110);
+        color: $headerColor;
     }
 
     a{

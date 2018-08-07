@@ -9,9 +9,10 @@
 .grid-container {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'navbar' 'home-screen' 'about' 'prog-lang' 'studies' 'experience-section' 'hobbies-section' 'contact' 'footer';
+      grid-template-areas: 'navbar' 'home-screen' 'about' 'studies' 'experience-section' 'all-projects' 'hobbies-section' 'contact' 'footer';
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  background: black;
 }
 
 .grid-container > div {
@@ -113,14 +114,12 @@
   -ms-grid-column: 1;
   grid-area: about;
   opacity: 0;
-  margin-top: 250px;
-  background-color: rgba(0, 0, 0, 0.842);
-  color: white;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.952);
+  color: #24243b;
   height: 330px;
   padding: 10px;
   display: block;
-  -webkit-box-shadow: 5px 10px 20px #333;
-          box-shadow: 5px 10px 20px #333;
   -webkit-transition: all 1s;
   transition: all 1s;
   /* This is the code for the text inside the about section */
@@ -144,182 +143,15 @@
   font-size: 1.5em;
 }
 
-/* This is the code for the Programming Languages Bar */
-.prog-lang {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: prog-lang;
-  opacity: 0;
-  margin-top: 250px;
-  background-color: #ebebebc4;
-  text-align: center;
-  -webkit-box-shadow: 5px 10px 20px #ebebeb;
-          box-shadow: 5px 10px 20px #ebebeb;
-  height: 450px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.prog-lang .margin-wrapper {
-  margin-right: 200px;
-  margin-left: 200px;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: 'prog-head prog-content';
-  -ms-grid-columns: 30% 1fr;
-      grid-template-columns: 30% 1fr;
-}
-
-.prog-lang .margin-wrapper .prog-head {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: prog-head;
-  border: none;
-  height: 450px;
-  position: relative;
-}
-
-.prog-lang .margin-wrapper .prog-head h2 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 2em;
-}
-
-.prog-lang .margin-wrapper .prog-content {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: prog-content;
-  border: none;
-  height: 450px;
-  margin-left: 100px;
-  margin-right: 100px;
-  padding: 10px;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box {
-  margin-top: 20px;
-  height: 90px;
-  border: none;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box h4 {
-  color: white;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .html-img {
-  height: 90px;
-  width: 18%;
-  float: left;
-  border: none;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .html-img img {
-  height: 70%;
-  width: 90%;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .html-bar {
-  background: #ff6600;
-  float: left;
-  margin-left: 20px;
-  height: 40px;
-  margin-top: 15px;
-  border-radius: 3px;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .html-bar #html-percent {
-  width: 0%;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .css-img {
-  height: 90px;
-  width: 18%;
-  float: left;
-  border: none;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .css-img img {
-  height: 70%;
-  width: 90%;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .css-bar {
-  background: #037abe;
-  float: left;
-  margin-left: 20px;
-  height: 40px;
-  margin-top: 15px;
-  border-radius: 3px;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .css-bar #css-percent {
-  width: 0%;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .js-img {
-  height: 90px;
-  width: 18%;
-  float: left;
-  border: none;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .js-img img {
-  height: 70%;
-  width: 90%;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .js-bar {
-  background: #c2cf05;
-  float: left;
-  margin-left: 20px;
-  height: 40px;
-  margin-top: 15px;
-  border-radius: 3px;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .js-bar #js-percent {
-  width: 0%;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .python-img {
-  height: 90px;
-  width: 18%;
-  float: left;
-  border: none;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .python-img img {
-  height: 70%;
-  width: 90%;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .python-bar {
-  background: #01bb29;
-  float: left;
-  margin-left: 20px;
-  height: 40px;
-  margin-top: 15px;
-  border-radius: 3px;
-}
-
-.prog-lang .margin-wrapper .prog-content .prog-box .python-bar #python-percent {
-  width: 0%;
-}
-
 /* This code is for the studies and hobbies section of the page (blue) */
 .studies {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: studies;
   opacity: 0;
-  margin-top: 250px;
-  height: 400px;
+  margin-top: 40px;
+  height: 620px;
   background-color: rgba(0, 0, 0, 0.842);
-  -webkit-box-shadow: 5px 10px 20px #333;
-          box-shadow: 5px 10px 20px #333;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -358,16 +190,15 @@
 }
 
 .experience-section {
-  -ms-grid-row: 6;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: experience-section;
-  height: 600px;
+  height: 630px;
   opacity: 0;
-  margin-top: 250px;
-  background-color: #ebebebc4;
-  -webkit-box-shadow: 5px 10px 20px #ebebeb;
-          box-shadow: 5px 10px 20px #ebebeb;
-  color: grey;
+  margin-top: 40px;
+  background: -webkit-gradient(linear, right top, left top, from(#4b6cb7), to(#182848));
+  background: linear-gradient(to left, #4b6cb7, #182848);
+  color: white;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -387,17 +218,92 @@
   margin-left: 80px;
 }
 
+.all-projects {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: all-projects;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.856);
+  height: 700px;
+}
+
+.all-projects h2 {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+.all-projects #projects-main {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'project1 project2' 'project3 project4';
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.all-projects #projects-main h4 {
+  text-align: center;
+  color: white;
+}
+
+.all-projects #projects-main img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.all-projects #projects-main img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.all-projects #projects-main #project1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: project1;
+  height: 300px;
+  overflow: hidden;
+}
+
+.all-projects #projects-main #project2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: project2;
+  height: 300px;
+  overflow: hidden;
+}
+
+.all-projects #projects-main #project3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: project3;
+  height: 300px;
+  overflow: hidden;
+}
+
+.all-projects #projects-main #project4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: project4;
+  height: 300px;
+  overflow: hidden;
+}
+
 .hobbies-section {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: hobbies-section;
-  height: 550px;
+  height: 350px;
   opacity: 0;
-  margin-top: 250px;
+  margin-top: 40px;
   text-align: center;
-  color: white;
-  background: -webkit-gradient(linear, left top, right top, from(#c2e59c), to(#64b3f4));
-  background: linear-gradient(to right, #c2e59c, #64b3f4);
+  color: #24243b;
+  background: white;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -431,11 +337,9 @@
   -ms-grid-row: 8;
   -ms-grid-column: 1;
   grid-area: contact;
-  margin-top: 200px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 150px;
-  -webkit-box-shadow: 5px 5px 20px #ebebeb;
-          box-shadow: 5px 5px 20px #ebebeb;
   background-color: rgba(235, 235, 235, 0.842);
   position: relative;
   -webkit-transition: all 0.5s;
@@ -444,7 +348,7 @@
 
 .contact h2 {
   text-align: center;
-  color: #6e6e6e;
+  color: #24243b;
 }
 
 .contact a {
