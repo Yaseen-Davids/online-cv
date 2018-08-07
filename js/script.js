@@ -8,7 +8,7 @@ $(document).ready(function(){
     /* This is the code for the form */
     $("#contactMe-button").on('click', function() {
         $(this).fadeOut('500');
-        $("#contact-section").css('height', '400px');
+        $("#contact-section").css('height', '470px');
         $("#myForm").css('display', 'block');
 
         /* This is code runs after 0.5 seconds */
@@ -41,6 +41,23 @@ $(document).ready(function(){
 
     $("#contact-me-logo").on('click', function(){
         $("#contact-me-main").fadeToggle('slow', 'linear');
+    })
+
+    $(".hamburger-btn").on('click', function(){
+
+        if ($(".hamburger-menu").css('height') == "50px"){
+            $(".hamburger-menu").css('display', 'block');
+            $(".hamburger-menu").css('height', '300px');    
+        }
+
+        if ($(".hamburger-menu").css('height') == "300px") {
+            $(".hamburger-menu").css('height', '50px');
+            setTimeout(function(){
+                $(".hamburger-menu").css('display', 'none');
+            },1000)
+            
+        }
+
     })
 
     onscroll = function(){

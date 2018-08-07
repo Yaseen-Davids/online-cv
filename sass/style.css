@@ -49,6 +49,19 @@
   border-bottom-color: black;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.showMenu {
+  display: block;
+  height: 300px;
+}
+
 /* This is the code for the home screen text and picture */
 .home-screen {
   -ms-grid-row: 2;
@@ -73,34 +86,6 @@
   font-size: 1.4em;
   letter-spacing: 3px;
   color: #939393;
-}
-
-#contact-me-logo {
-  position: fixed;
-  top: 100px;
-  right: -100px;
-  z-index: 10000;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-#contact-me-main {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: black;
-  color: white;
-  z-index: 10000;
-  padding: 20px;
-}
-
-#contact-me-main h3 {
-  font-weight: lighter;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .margin-wrapper {
@@ -313,6 +298,7 @@
 }
 
 .hobbies-section ul {
+  margin-left: -50px;
   margin-top: 20px;
   list-style: none;
 }
@@ -339,8 +325,8 @@
   grid-area: contact;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 150px;
-  background-color: rgba(235, 235, 235, 0.842);
+  height: 250px;
+  background: rgba(255, 255, 255, 0.952);
   position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -351,10 +337,17 @@
   color: #24243b;
 }
 
+.contact h3 {
+  font-weight: lighter;
+  margin-top: 20px;
+  text-align: center;
+  color: #24243b;
+}
+
 .contact a {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 200px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   overflow: hidden;
@@ -384,7 +377,7 @@
   opacity: 0;
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 65%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -403,6 +396,7 @@
   font-size: 1.1em;
   border: none;
   resize: none;
+  outline-color: green;
   width: 610px;
 }
 
@@ -453,12 +447,55 @@
 @media (min-width: 1px) and (max-width: 599px) {
   /* This is the code for the navigation bar */
   #navbar {
-    padding: 20px;
-    font-size: 0.6em;
-    word-spacing: 30px;
+    display: none;
+  }
+  .hamburger-btn {
+    display: block;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5em;
+    z-index: 100000;
+    background: white;
+  }
+  .hamburger-btn .fa-bars {
+    padding: 5px;
+  }
+  .showMenu {
+    display: block;
+    height: 300px;
+  }
+  .hamburger-menu {
+    display: none;
+    width: 100vw;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    background: black;
+    height: 50px;
+    color: white;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .hamburger-menu ul {
+    margin-top: 20px;
+    list-style: none;
+  }
+  .hamburger-menu ul li {
+    margin-top: 30px;
+  }
+  .hamburger-menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .hamburger-menu .shownav {
+    display: block;
   }
   .grid-container > div {
-    padding: 10px;
+    padding: 0px;
+  }
+  .hidenav {
+    display: none;
   }
   .margin-wrapper {
     margin-right: 10px;
@@ -499,49 +536,11 @@
   .about .box-about p {
     font-size: 1.1em;
   }
-  /* This is the code for the Programming Languages Bar */
-  .prog-lang {
-    padding: 0;
-    opacity: 0;
-    margin-top: 250px;
-    height: 500px;
-  }
-  .prog-lang .margin-wrapper {
-    margin-right: 10px;
-    margin-left: 10px;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: 'prog-head' 'prog-content';
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .prog-lang .margin-wrapper .prog-head {
-    height: 50px;
-    position: relative;
-  }
-  .prog-lang .margin-wrapper .prog-head h2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-size: 2em;
-  }
-  .prog-lang .margin-wrapper .prog-content {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: prog-content;
-    border: none;
-    height: 450px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 5px;
-  }
   /* This code is for the studies and hobbies section of the page */
   .studies {
     opacity: 0;
     margin-top: 250px;
-    height: 620px;
+    height: 750px;
   }
   .studies .studies-section {
     display: -ms-grid;
@@ -563,6 +562,7 @@
     height: 640px;
   }
   .experience-section h2, .experience-section h3 {
+    margin-top: 20px;
     text-align: center;
     font-size: 1.2em;
   }
@@ -574,11 +574,39 @@
     font-size: 0.9em;
     margin-left: 30px;
   }
+  .all-projects {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: all-projects;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.856);
+    height: 1350px;
+  }
+  .all-projects h2 {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .all-projects #projects-main {
+    margin-top: 30px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'project1' 'project2' 'project3' 'project4';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .all-projects #projects-main h4 {
+    text-align: center;
+    color: white;
+  }
   .hobbies-section {
     padding: 0;
-    height: 470px;
+    height: 320px;
   }
   .hobbies-section h2 {
+    margin-top: 20px;
     font-weight: bolder;
     font-size: 1em;
   }
@@ -592,17 +620,17 @@
   /* This code is for the contact section of the page */
   .contact {
     padding: 5px;
-    margin-top: 200px;
-    height: 150px;
+    margin-top: 20px;
+    height: 250px;
   }
   .contact h2 {
-    color: #6e6e6e;
-    font-size: 1em;
+    font-size: 1.3em;
+    margin-top: 20px;
   }
   .contact a {
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 70%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     overflow: hidden;
@@ -621,7 +649,7 @@
     opacity: 0;
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 65%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
@@ -664,11 +692,12 @@
   }
   #contact-me-main {
     top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    left: 10px;
+    right: 10px;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
     padding: 20px;
-    width: 70%;
+    width: 80%;
   }
   #contact-me-main h3 {
     font-size: 0.9em;
@@ -686,20 +715,24 @@
   }
   .hobbies-section {
     padding: 0;
-    height: 450px;
+    height: 320px;
   }
 }
 
 @media (min-width: 401px) and (max-width: 500px) {
   .about {
-    height: 360px;
+    height: 340px;
+  }
+  /* This code is for the studies and hobbies section of the page (blue) */
+  .studies {
+    height: 690px;
   }
   .experience-section {
-    height: 550px;
+    height: 580px;
   }
   .hobbies-section {
     padding: 0;
-    height: 450px;
+    height: 310px;
   }
 }
 
@@ -708,16 +741,19 @@
     height: 300px;
   }
   .experience-section {
-    height: 520px;
+    height: 500px;
   }
   .hobbies-section {
     padding: 0;
-    height: 450px;
+    height: 320px;
   }
   .studies {
-    height: 550px;
+    height: 600px;
   }
   /* This code is for the contact section of the page */
+  .contact {
+    height: 250px;
+  }
   .contact h2 {
     font-size: 1.5em;
   }
@@ -726,7 +762,7 @@
     opacity: 0;
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 70%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
@@ -788,7 +824,7 @@
   /* This is the code for the about section of the page */
   .about {
     margin-top: 250px;
-    height: 360px;
+    height: 350px;
     padding: 5px;
     /* This is the code for the text inside the about section */
   }
@@ -804,49 +840,11 @@
   .about .box-about p {
     font-size: 1.4em;
   }
-  /* This is the code for the Programming Languages Bar */
-  .prog-lang {
-    padding: 0;
-    opacity: 0;
-    margin-top: 250px;
-    height: 500px;
-  }
-  .prog-lang .margin-wrapper {
-    margin-right: 150px;
-    margin-left: 150px;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: 'prog-head' 'prog-content';
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .prog-lang .margin-wrapper .prog-head {
-    height: 50px;
-    position: relative;
-  }
-  .prog-lang .margin-wrapper .prog-head h2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-size: 2em;
-  }
-  .prog-lang .margin-wrapper .prog-content {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: prog-content;
-    border: none;
-    height: 450px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 5px;
-  }
   /* This code is for the studies and hobbies section of the page */
   .studies {
     opacity: 0;
     margin-top: 250px;
-    height: 620px;
+    height: 670px;
   }
   .studies .studies-section {
     display: -ms-grid;
@@ -865,7 +863,7 @@
     margin-left: 20px;
   }
   .experience-section {
-    height: 600px;
+    height: 550px;
   }
   .experience-section h2, .experience-section h3 {
     text-align: center;
@@ -881,7 +879,7 @@
   }
   .hobbies-section {
     padding: 0px;
-    height: 500px;
+    height: 300px;
   }
   .hobbies-section h2 {
     font-weight: bolder;
@@ -897,8 +895,7 @@
   /* This code is for the contact section of the page */
   .contact {
     padding: 5px;
-    margin-top: 200px;
-    height: 150px;
+    height: 200px;
   }
   .contact h2 {
     color: #6e6e6e;
@@ -907,7 +904,7 @@
   .contact a {
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 170px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     overflow: hidden;
@@ -926,7 +923,7 @@
     opacity: 0;
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 65%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
@@ -993,7 +990,7 @@
   /* This is the code for the about section of the page */
   .about {
     margin-top: 250px;
-    height: 360px;
+    height: 340px;
     padding: 5px;
     /* This is the code for the text inside the about section */
   }
@@ -1009,49 +1006,10 @@
   .about .box-about p {
     font-size: 1.4em;
   }
-  /* This is the code for the Programming Languages Bar */
-  .prog-lang {
-    padding: 0;
-    opacity: 0;
-    margin-top: 250px;
-    height: 500px;
-  }
-  .prog-lang .margin-wrapper {
-    margin-right: 150px;
-    margin-left: 150px;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: 'prog-head prog-content';
-    -ms-grid-columns: 30% 1fr;
-        grid-template-columns: 30% 1fr;
-  }
-  .prog-lang .margin-wrapper .prog-head {
-    height: 50px;
-    position: relative;
-  }
-  .prog-lang .margin-wrapper .prog-head h2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-size: 2em;
-  }
-  .prog-lang .margin-wrapper .prog-content {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: prog-content;
-    border: none;
-    height: 450px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 5px;
-  }
   /* This code is for the studies and hobbies section of the page */
   .studies {
     opacity: 0;
-    margin-top: 250px;
-    height: 620px;
+    height: 650px;
   }
   .studies .studies-section {
     display: -ms-grid;
@@ -1070,7 +1028,7 @@
     margin-left: 20px;
   }
   .experience-section {
-    height: 600px;
+    height: 550px;
   }
   .experience-section h2, .experience-section h3 {
     text-align: center;
@@ -1086,7 +1044,7 @@
   }
   .hobbies-section {
     padding: 0px;
-    height: 570px;
+    height: 350px;
   }
   .hobbies-section h2 {
     font-weight: bolder;
@@ -1102,8 +1060,7 @@
   /* This code is for the contact section of the page */
   .contact {
     padding: 5px;
-    margin-top: 200px;
-    height: 150px;
+    height: 250px;
   }
   .contact h2 {
     color: #6e6e6e;
@@ -1112,7 +1069,7 @@
   .contact a {
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 65%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     overflow: hidden;
@@ -1131,7 +1088,7 @@
     opacity: 0;
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 65%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }

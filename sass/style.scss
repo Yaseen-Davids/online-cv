@@ -61,6 +61,18 @@ $headerColor: rgb(36, 36, 59);
     }
 }
   
+
+.hamburger-menu{
+    display: none;
+}
+.hamburger-btn{
+    display: none;
+}
+
+.showMenu{
+    display: block;
+    height: 300px;
+}
   
 /* This is the code for the home screen text and picture */
 .home-screen{
@@ -82,34 +94,6 @@ $headerColor: rgb(36, 36, 59);
         letter-spacing: 3px;
         color: #939393;
       }
-}
-
-// This is the contact logo
-#contact-me-logo{
-    position: fixed;
-    top: 100px;
-    right: -100px;
-    z-index: 10000;
-    transition: all 1s;
-}
-
-// This is the contact me main section
-#contact-me-main{
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: black;
-    color: white;
-    z-index: 10000;
-    padding: 20px;
-
-    h3{
-        font-weight: lighter;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
 }
 
 .margin-wrapper{
@@ -287,7 +271,9 @@ $headerColor: rgb(36, 36, 59);
     h2{
         font-weight: bolder;
     }
+
     ul{
+        margin-left: -50px;
         margin-top: 20px;
         list-style: none;
         li{
@@ -310,8 +296,8 @@ $headerColor: rgb(36, 36, 59);
     grid-area: contact;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 150px;
-    background-color: rgba(235, 235, 235, 0.842);
+    height: 250px;
+    background: rgba(255, 255, 255, 0.952);
     position: relative;
     transition: all 0.5s;
 
@@ -320,10 +306,17 @@ $headerColor: rgb(36, 36, 59);
         color: $headerColor;
     }
 
+    h3{
+        font-weight: lighter;
+        margin-top: 20px;
+        text-align: center;
+        color: $headerColor;
+    }
+
     a{
         position: absolute;
         left: 50%;
-        top: 60%;
+        top: 200px;
         transform: translate(-50%,-50%);
         overflow: hidden;
         transition: all 0.3s;
@@ -349,7 +342,7 @@ $headerColor: rgb(36, 36, 59);
         opacity: 0;
         position: absolute;
         left: 50%;
-        top: 55%;
+        top: 65%;
         transform: translate(-50%,-50%);
 
         input{
@@ -365,6 +358,7 @@ $headerColor: rgb(36, 36, 59);
             font-size: 1.1em;
             border: none;
             resize: none;
+            outline-color: green;
             width: 610px;
         }
         button{

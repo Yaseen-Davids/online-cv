@@ -10,6 +10,7 @@
     <link rel="icon" type="favicon" href="./images/yd-logo.jpg">
     <!-- This is the link to the font I used -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   </head>
   <body>
 
@@ -22,28 +23,32 @@
         <!-- This is the navigation bar -->
         <nav>
           <div id="navbar">
-            <a href="#about" id="goToAbout">About</a>
-            <a href="#education" id="goToStud">Education</a>
-            <a href="#experience" id="goToExp">Experience</a>
-            <a href="#contact" id="goToCont">Contact</a>
+            <a href="#about" class="hidenav" id="goToAbout">About</a>
+            <a href="#education" class="hidenav" id="goToStud">Education</a>
+            <a href="#experience" class="hidenav" id="goToExp">Experience</a>
+            <a href="#projects" class="hidenav" id="goToProj">Projects</a>
+            <a href="#contact" class="hidenav" id="goToCont">Contact</a>
           </div>
         </nav>
+
+        <div class="hamburger-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="hamburger-menu">
+          <ul>
+            <li><a href="#about" class="shownav" id="goToAbout">About</a></li>
+            <li><a href="#education" class="shownav" id="goToStud">Education</a></li>
+            <li><a href="#experience" class="shownav" id="goToExp">Experience</a></li>
+            <li><a href="#projects" class="shownav" id="goToProj">Projects</a></li>
+            <li><a href="#contact" class="shownav" id="goToCont">Contact</a></li>
+          </ul>
+        </div> 
 
         <!-- This is the home screen text and image -->
         <div class="home-screen" id="home-screen">
           <h1>Yaseen Davids</h1>
           <h4>Junior Web Developer</h4>
-        </div>
-
-        <!-- This is the contact logo -->
-        <div id="contact-me-logo">
-          <img src="./images/contact.png">
-        </div>
-
-        <!-- This is the contact main section -->
-        <div id="contact-me-main">
-          <h3><b>Email : </b>yaseendavids477@gmail.com</h3>
-          <h3><b>Phone Number : </b>061 647 8942</h3>
         </div>
 
         <!-- This is the about section of the page -->
@@ -130,16 +135,16 @@
             <!-- This is the projects main -->
             <div id="projects-main">
               <div id="project1">
-                <img src="images/outdoor-adventures.png" alt="Outdoor Adventures">
+                <a href="https://yaseen-davids.github.io/outdoor_adventures/"><img src="images/outdoor-adventures.png" alt="Outdoor Adventures"></a>
               </div>
               <div id="project2">
-                <img src="images/code4ct.png" alt="Code4CT">
+                <a href="https://yaseen-davids.github.io/Code4CT/"><img src="images/code4ct.png" alt="Code4CT"></a>
               </div>
               <div id="project3">
-                <img src="images/stancenation.png" alt="StanceNation">
+                <a href="https://stance-nation-blog.glitch.me/"><img src="images/stancenation.png" alt="StanceNation"></a>
               </div>
               <div id="project4">
-                <img src="images/techtalk.png" alt="TechTalk">
+                <a href="https://techtalk-2-0.glitch.me/"><img src="images/techtalk.png" alt="TechTalk"></a>
               </div>
             </div>
 
@@ -168,6 +173,9 @@
         <div class="contact" id="contact-section">
 
           <h2>Get in touch</h2>
+
+          <h3><b>Email:</b> yaseendavids477@gmail.com</h3>
+          <h3><b>Phone Number:</b> 061 647 8942</h3>
 
           <a href="#contactMe" id="contactMe-button"><button>Contact Me</button></a>
 
