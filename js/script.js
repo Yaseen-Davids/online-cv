@@ -48,6 +48,38 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop: theContPos}, 1500);
     });
 
+    $(".shownav").on('click', function() {
+        $(".hamburger-menu").css('height', '50px');
+        setTimeout(function(){
+            $(".hamburger-menu").css('display', 'none');
+        },1000);
+    })
+
+    // if user clicks button smooth scroll to div
+    $(".goToAbout").on('click', function(){
+        $('html, body').animate({scrollTop: aboutPos}, 2000);
+    });
+
+    // if user clicks button smooth scroll to div
+    $(".goToStud").on('click', function(){
+        $('html, body').animate({scrollTop: theStudPos}, 2000);
+    });
+
+    // if user clicks button smooth scroll to div
+    $(".goToProj").on('click', function(){
+        $('html, body').animate({scrollTop: theProjPos}, 2000);
+    });
+
+    // if user clicks button smooth scroll to div
+    $(".goToExp").on('click', function(){
+        $('html, body').animate({scrollTop: theExpPos}, 2000);
+    });
+
+    // if user clicks button smooth scroll to div
+    $(".goToCont").on('click', function(){
+        $('html, body').animate({scrollTop: theContPos}, 2000);
+    });
+
 
     // if user clicks hamburger button, show navmenu
     $(".hamburger-btn").on('click', function(){
@@ -61,7 +93,7 @@ $(document).ready(function(){
             $(".hamburger-menu").css('height', '50px');
             setTimeout(function(){
                 $(".hamburger-menu").css('display', 'none');
-            },1000)
+            },1000);
             
         }
 
